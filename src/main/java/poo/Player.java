@@ -62,6 +62,8 @@ public abstract class Player {
         this.numberTShirt = numberTShirt;
     }
 
+    public abstract void calentamiento();
+
     @Override
     public String toString() {
         return "Player{" +

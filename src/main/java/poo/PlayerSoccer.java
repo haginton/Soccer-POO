@@ -58,6 +58,11 @@ public class PlayerSoccer extends Player{
     }
 
     @Override
+    public void calentamiento() {
+        System.out.println("El jugador " + super.getFullName() + " Realiza calentamieto de campo");
+    }
+
+    @Override
     public String toString() {
         return super.toString() + "{ PlayerSoccer{" +
                 "levelAttack=" + levelAttack +
