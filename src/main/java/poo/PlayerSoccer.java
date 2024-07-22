@@ -1,84 +1,68 @@
 package poo;
 
-public class PlayerSoccer {
+public class PlayerSoccer extends Player{
 
     //atributos
 
     //Encapsulamiento
-    private String fullName;
-    private String position;
-    private String nationality;
-    private String actualTeam;
-    private int numberTShirt;
-    private int changeNationality;
+
+    private int levelAttack;
+    private int levelMedium;
+    private int levelDefending;
+
 
     //metodo constructor
     //modificador - ambito - retorno - nombre - parametros(firma metodo)
-    public PlayerSoccer(){ //primer metodo en ejecutarse
 
+    public PlayerSoccer(String fullName, String position, String nationality, String actualTeam, int numberTShirt, int levelAttack, int levelMedium, int levelDefending) {
+        super(numberTShirt, actualTeam, nationality, position, fullName);
+
+        this.levelAttack = levelAttack;
+        this.levelMedium = levelMedium;
+        this.levelDefending = levelDefending;
     }
 
-    public PlayerSoccer(String fullName, String position, String nationality, String actualTeam, int numberTShirt) {
-        this.fullName = fullName;
-        this.position = position;
-        this.nationality = nationality;
-        this.actualTeam = actualTeam;
-        this.numberTShirt = numberTShirt;
-    }
 
     //Metodos
 
     // 1. metodos Get y Set
 
-    public String getFullName(){ //obtener
-        return this.fullName;
+    public int getLevelAttack() {
+        return levelAttack;
     }
 
-    public void setFullName(String fullName){
-        this.fullName = fullName;
+    public void setLevelAttack(int levelAttack) {
+        this.levelAttack = levelAttack;
     }
 
-    public String getPosition() {
-        return position;
+    public int getLevelMedium() {
+        return levelMedium;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setLevelMedium(int levelMedium) {
+        this.levelMedium = levelMedium;
     }
 
-    public String getNationality() {
-        return nationality;
+    public int getLevelDefending() {
+        return levelDefending;
     }
 
-    public void setNationality(String nationality) {
-        if (changeNationality >= 1){
-            System.out.println("Only one change of nationality is allowed");
-        }else {
-            this.nationality = nationality;
-            changeNationality++;
-        }
-    }
-
-    public String getActualTeam() {
-        return actualTeam;
-    }
-
-    public void setActualTeam(String actualTeam) {
-        this.actualTeam = actualTeam;
-    }
-
-    public int getNumberTShirt() {
-        return numberTShirt;
-    }
-
-    public void setNumberTShirt(int numberTShirt) {
-        this.numberTShirt = numberTShirt;
+    public void setLevelDefending(int levelDefending) {
+        this.levelDefending = levelDefending;
     }
 
     // 2. metodos propios
 
     public void patearBalon(){
-        System.out.println("El judador " + this.fullName + " ha pateado el balon");
+        System.out.println("El judador " + super.getFullName() + " ha pateado el balon");
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "{ PlayerSoccer{" +
+                "levelAttack=" + levelAttack +
+                ", levelMedium=" + levelMedium +
+                ", levelDefending=" + levelDefending +
+                '}' + '}';
+    }
 }

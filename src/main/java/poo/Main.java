@@ -7,9 +7,15 @@ public class Main {
                 "Delantero",
                 "Colombia",
                 "Soccer FC",
-                10
+                10,
+                90,
+                75,
+                40
         );
-        System.out.println("player1.fullName = " + player1.getFullName());
+
+        //PlayerSoccer player2 = new PlayerSoccer();
+
+        /*System.out.println("player1.fullName = " + player1.getFullName());
         player1.setFullName("Carlos");
         System.out.println("player1.fullName = " + player1.getFullName());
         System.out.println(player1.getNationality());
@@ -18,5 +24,8 @@ public class Main {
         player1.setNationality("Perú");
         System.out.println(player1.getNationality());
         player1.patearBalon();
+
+        System.out.println(player1);*/
+
     }
 }
