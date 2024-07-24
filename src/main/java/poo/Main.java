@@ -26,6 +26,17 @@ public class Main {
         player1.patearBalon();
 
         System.out.println(player1);*/
+        GoalKeeper arquero1 = new GoalKeeper(1,
+                "equipo", "C",
+                "arquero",
+                "Juan",
+                90,
+                99
+        );
+        System.out.println(player1);
+        player1.calentamiento();
+        System.out.println(arquero1);
+        arquero1.calentamiento();
 
     }
 }
