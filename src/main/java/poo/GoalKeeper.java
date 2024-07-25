@@ -28,6 +28,11 @@ public class GoalKeeper extends Player {
         this.levelReflexes = levelReflexes;
     }
 
+    public void metodoDelArquero(){
+        System.out.println("Soy un metodo que solo puede ser ejecutado desde una instancia arquero");
+    }
+
+    //Polimorfismo Dinámico, ocurre en tiempo de ejecución
     @Override
     public void calentamiento() {
         System.out.println("calentando arquero");

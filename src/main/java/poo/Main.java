@@ -13,6 +13,17 @@ public class Main {
                 40
         );
 
+        //jugador agente libre
+        PlayerSoccer player2 = new PlayerSoccer(
+                "Juan",
+                "Delantero",
+                "Colombia",
+                10,
+                90,
+                75,
+                40
+        );
+
         //PlayerSoccer player2 = new PlayerSoccer();
 
         /*System.out.println("player1.fullName = " + player1.getFullName());
@@ -33,10 +44,34 @@ public class Main {
                 90,
                 99
         );
+
         System.out.println(player1);
         player1.calentamiento();
         System.out.println(arquero1);
         arquero1.calentamiento();
+
+        //Polimorfismo por sustitución, cuando instanciamos una super clase con el constructor de una subclase
+        Player jugadorGenerico = new GoalKeeper(1,
+                "equipo", "C",
+                "arquero",
+                "Juan",
+                89,
+                85
+                );
+        jugadorGenerico.calentamiento();
+        //GoalKeeper arquero2 = (GoalKeeper) jugadorGenerico;
+        jugadorGenerico.metodoDelArquero();
+        //arquero2.metodoDelArquero();
+
+        jugadorGenerico = new PlayerSoccer("Juanito",
+                "Delantero",
+                "Colombia",
+                10,
+                90,
+                75,
+                40);
+        jugadorGenerico.calentamiento();
+        jugadorGenerico.metodoDelArquero();
 
     }
 }

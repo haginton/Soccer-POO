@@ -17,6 +17,16 @@ public abstract class Player {
         this.fullName = fullName;
     }
 
+    //Metodo constructor para generar jugadores o arqueros como agentes libres
+    //Polimorfismo Estático, ocurre en tiempo de compilación
+
+    public Player(String fullName, String position, String nationality, int numberTShirt) {
+        this.fullName = fullName;
+        this.position = position;
+        this.nationality = nationality;
+        this.numberTShirt = numberTShirt;
+    }
+
     public String getFullName() {
         return fullName;
     }
@@ -63,6 +73,10 @@ public abstract class Player {
     }
 
     public abstract void calentamiento();
+
+    public void metodoDelArquero(){
+
+    }
 
     @Override
     public String toString() {

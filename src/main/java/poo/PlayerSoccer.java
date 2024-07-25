@@ -22,6 +22,13 @@ public class PlayerSoccer extends Player{
         this.levelDefending = levelDefending;
     }
 
+    public PlayerSoccer(String fullName, String position, String nationality, int numberTShirt, int levelAttack, int levelMedium, int levelDefending) {
+        super(fullName, position, nationality, numberTShirt);
+        this.levelAttack = levelAttack;
+        this.levelMedium = levelMedium;
+        this.levelDefending = levelDefending;
+    }
+
 
     //Metodos
 
@@ -57,6 +64,7 @@ public class PlayerSoccer extends Player{
         System.out.println("El judador " + super.getFullName() + " ha pateado el balon");
     }
 
+    //Polimorfismo Dinámico, ocurre en tiempo de ejecución
     @Override
     public void calentamiento() {
         System.out.println("El jugador " + super.getFullName() + " Realiza calentamieto de campo");
